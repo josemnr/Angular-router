@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CategoryComponent } from './pages/category/category.component';
 import { HomeComponent } from './pages/home/home.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'category/:id',
     component: CategoryComponent,
+  },
+  {
+    path: '**',
+    component: NotFoundComponent,
   },
 ];
 
