@@ -19,6 +19,13 @@ export class ProductsComponent implements OnInit {
   myShoppingCart: Product[] = [];
   total = 0;
   @Input() products: Product[] = [];
+  @Input() 
+  set productId(id: string | null) {
+    if(id) {
+      this.onShowDetail(id);
+      console.log('Product id', id);
+    }
+  }
   @Output() loadMore = new EventEmitter();
   showProductDetail = false;
   productChosen: Product | null = null;
@@ -45,7 +52,10 @@ export class ProductsComponent implements OnInit {
 
   onShowDetail(id: string) {
     this.statusDetail = 'loading';
-    this.toggleProductDetail();
+    if(!this.showProductDetail) {
+      this.showProductDetail = true;
+    }
+    // this.toggleProductDetail();
     this.productsService.getOne(id).subscribe(
       (data) => {
         this.productChosen = data;
