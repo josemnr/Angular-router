@@ -45,7 +45,7 @@ import { LayoutComponent } from './website/components/layout/layout.component';
     RecoveryComponent,
     ProfileComponent,
     ProductDetailComponent,
-    LayoutComponent
+    LayoutComponent,
   ],
   imports: [
     BrowserModule,

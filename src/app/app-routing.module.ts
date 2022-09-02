@@ -6,17 +6,16 @@ import { HomeComponent } from './website/pages/home/home.component';
 import { NotFoundComponent } from './website/pages/not-found/not-found.component';
 import { ProductDetailComponent } from './website/pages/product-detail/product-detail.component';
 
-// {
-//   path: '',
-//   redirectTo: '/home',
-//   pathMatch: 'full'
-// },
-
 const routes: Routes = [
   {
     path: '',
     component: LayoutComponent,
     children: [
+      {
+        path: '',
+        redirectTo: '/home',
+        pathMatch: 'full'
+      },
       {
         path: 'home',
         component: HomeComponent
@@ -30,6 +29,10 @@ const routes: Routes = [
         component: ProductDetailComponent,
       },
     ]
+  },
+  {
+    path:'cms',
+    loadChildren: () => import('./cms/cms.module').then(m => m.CmsModule)
   },
   {
     path: '**',
