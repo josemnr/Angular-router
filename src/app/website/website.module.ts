@@ -18,6 +18,9 @@ import { RegisterComponent } from './pages/register/register.component';
 import { RecoveryComponent } from './pages/recovery/recovery.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { ReversePipe } from './pipes/reverse.pipe';
+import { TimeAgoPipe } from './pipes/time-ago.pipe';
+import { HighlightDirective } from './directives/highlight.directive';
 
 
 
@@ -36,7 +39,10 @@ import { ProductDetailComponent } from './pages/product-detail/product-detail.co
     RecoveryComponent,
     ProfileComponent,
     ProductsComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    ReversePipe,
+    TimeAgoPipe,
+    HighlightDirective
   ],
   imports: [
     CommonModule,
