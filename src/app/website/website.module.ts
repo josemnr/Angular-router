@@ -13,6 +13,7 @@ import { RegisterComponent } from './pages/register/register.component';
 import { RecoveryComponent } from './pages/recovery/recovery.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { ProductDetailComponent } from './pages/product-detail/product-detail.component';
+import { QuicklinkModule } from 'ngx-quicklink';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ProductDetailComponent } from './pages/product-detail/product-detail.co
   imports: [
     SharedModule,  
     CommonModule,
-    WebsiteRoutingModule
+    WebsiteRoutingModule,
+    QuicklinkModule
   ]
 })
 export class WebsiteModule { }
